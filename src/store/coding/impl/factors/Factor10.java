@@ -1,23 +1,25 @@
-package store.coding.impl;
+package store.coding.impl.factors;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import store.coding.IFactor;
+import store.coding.interfaces.IFactor;
 
 /**
- * 空格、回车、换行符、制表符占比
+ * 
+ * 彝文音节：A000-A48F；
+ * 彝文部首：A490-A4CF；
  * @author Administrator
  *
  */
-public class Factor02 implements IFactor {
+public class Factor10 implements IFactor {
 
 	@Override
 	public float doFactor(String str) {
 		float factor = 0;
 		float count = 0;
-        Pattern p = Pattern.compile("\\s*|\t*|\r*|\n*");
-	    char[] ch = str.trim().toCharArray();
+        Pattern p = Pattern.compile("[\u2e80-\u4db5]");
+	    char[] ch = str.toCharArray();
         for(int i = 0; i < ch.length; i++){
     		Matcher matcher = p.matcher(String.valueOf(ch[i]));
     		if(matcher.matches()){

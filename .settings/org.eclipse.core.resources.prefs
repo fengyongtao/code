@@ -1,5 +1,6 @@
 eclipse.preferences.version=1
-encoding//src/store/coding/CodeUtil.java=UTF-8
+encoding//src/store/coding/FactorCalculate.java=UTF-8
 encoding//src/store/coding/Messy2NormalCode.java=UTF-8
-encoding//src/store/coding/impl/Factor03.java=UTF-8
-encoding//src/store/coding/impl/Factor07.java=UTF-8
+encoding//src/store/coding/impl/factors/Factor03.java=UTF-8
+encoding//src/store/coding/impl/factors/Factor07.java=UTF-8
+encoding//src/store/coding/util/ClassUtils.java=UTF-8

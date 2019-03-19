@@ -1,11 +1,12 @@
-package store.coding.impl;
+package store.coding.impl.factors;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import store.coding.IFactor;
+import store.coding.interfaces.IFactor;
 
 /**
+ * 
  * 拉丁文及其拓展：
  * C0控制符及基本拉丁文 (C0 Control and Basic Latin) 0080-00FF；
  * C1控制符及拉丁文补充-1 (C1 Control and Latin 1 Supplement) 0100-017F；
@@ -21,7 +22,7 @@ public class Factor07 implements IFactor {
 		float factor = 0;
 		float count = 0;
         Pattern p = Pattern.compile("[\u0080-\u02AF]");
-	    char[] ch = str.trim().toCharArray();
+	    char[] ch = str.toCharArray();
         for(int i = 0; i < ch.length; i++){
     		Matcher matcher = p.matcher(String.valueOf(ch[i]));
     		if(matcher.matches()){

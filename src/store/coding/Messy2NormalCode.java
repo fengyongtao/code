@@ -20,14 +20,19 @@ public class Messy2NormalCode {
 		String result = null;
 		List<Object> resultList = new ArrayList<Object>();
 		if (str != null && str.length() != 0) {
-			float messyRate = 1L;
 			for (Code c : Code.values()) {
 				for (Code d : Code.values()) {
 					if (c.getName() == d.getName()) {
 						continue;
 					}
+					
+					float tempRate = 0;
 					result = new String(str.getBytes(c.getName()), d.getName());
-					float tempRate = CodeUtil.isMessyCode(result);
+					Map<String, Float> tempMap = FactorCalculate.doCalculate(result);
+					System.out.println(tempMap);
+					for (Map.Entry<String, Float> entry: tempMap.entrySet()) {
+						tempRate += entry.getValue();
+					}
 					Map<String, Object> resultMap = new HashMap<String, Object>();
 					//  乱码的长度一般多于正常的字符长度
 					if (str.length() >= result.length()) {
@@ -41,6 +46,7 @@ public class Messy2NormalCode {
 					resultMap.put("afterCode", d.getName());
 					resultMap.put("beforeStr", str);
 					resultMap.put("afterStr", result);
+					System.out.println(resultMap);
 					resultList.add(resultMap);
 				}
 			}
@@ -60,7 +66,7 @@ public class Messy2NormalCode {
 		List<Object> resultList = encode(str);
 		for (Iterator<Object> iterator = resultList.iterator(); iterator.hasNext();) {
 			resultMap = (Map<String, Object>) iterator.next();
-			System.out.println("【" + resultMap.get("messyRate") + "】" + "【" + resultMap.get("afterStr") + "】");
+//			System.out.println("【" + resultMap.get("messyRate") + "】" + "【" + resultMap.get("afterStr") + "】");
 			if (maxValue < (float) resultMap.get("messyRate")) {
 				maxValue = (float) resultMap.get("messyRate");
 				System.out.println("【最终结果】" + resultMap);
