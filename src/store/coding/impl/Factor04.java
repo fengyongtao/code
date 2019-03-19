@@ -2,7 +2,7 @@ package store.coding.impl;
 
 import java.util.List;
 
-import store.coding.IMerryFactor;
+import store.coding.IFactor;
 import store.coding.Txt;
 
 /**
@@ -10,10 +10,10 @@ import store.coding.Txt;
  * @author Administrator
  *
  */
-public class Factor04 implements IMerryFactor{
+public class Factor04 implements IFactor{
 
 	@Override
-	public float doMerryFactor(String str) {
+	public float doFactor(String str) {
 		List<String> specialList = Txt
 				.readTxt("E:\\PROJECT\\wetools\\workspace\\wetools\\src\\store\\coding\\specialsign.txt");
 

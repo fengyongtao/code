@@ -56,7 +56,7 @@ public class Messy2NormalCode {
 		
 		
 		// String str = "锘挎槬鐪犱笉瑙夋檽锛屽澶勯椈鍟奸";
-		String str = "浼氭浛鎹㈡垚鍘熸枃浠跺悕,閰嶇疆杩欓」闇�瑕佹敞鎰忎腑鏂囦贡鐮侀棶棰� ";
+		String str = "鏂囦贡鐮侀棶棰� ";
 		List<Object> resultList = encode(str);
 		for (Iterator<Object> iterator = resultList.iterator(); iterator.hasNext();) {
 			resultMap = (Map<String, Object>) iterator.next();

@@ -1,16 +1,16 @@
 package store.coding.impl;
 
-import store.coding.IMerryFactor;
+import store.coding.IFactor;
 
 /**
  * 英文或数字占比
  * @author Administrator
  *
  */
-public class Factory06 implements IMerryFactor {
+public class Factor06 implements IFactor {
 
 	@Override
-	public float doMerryFactor(String str) {
+	public float doFactor(String str) {
 		float factor = 0;
 	    float count = 0;
 	    char[] ch = str.trim().toCharArray();

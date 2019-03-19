@@ -1,16 +1,16 @@
 package store.coding.impl;
 
-import store.coding.IMerryFactor;
+import store.coding.IFactor;
 
 /**
  * 无法转义的字符占比
  * @author Administrator
  *
  */
-public class Factor05 implements IMerryFactor {
+public class Factor05 implements IFactor {
 
 	@Override
-	public float doMerryFactor(String str) {
+	public float doFactor(String str) {
 		float count = 0;
 		char[] ch = str.trim().toCharArray();
 		for (int i = 0; i < ch.length; i++) {

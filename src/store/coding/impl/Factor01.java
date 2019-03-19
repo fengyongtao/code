@@ -3,12 +3,12 @@ package store.coding.impl;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import store.coding.IMerryFactor;
+import store.coding.IFactor;
 
-public class Factor01 implements IMerryFactor {
+public class Factor01 implements IFactor {
 
 	@Override
-	public float doMerryFactor(String str) {
+	public float doFactor(String str) {
 		float factor = 0;
 		float count = 0;
         Pattern p = Pattern.compile("[\u4e00-\u9fa5]");

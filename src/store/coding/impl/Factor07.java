@@ -3,7 +3,7 @@ package store.coding.impl;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import store.coding.IMerryFactor;
+import store.coding.IFactor;
 
 /**
  * 拉丁文及其拓展：
@@ -14,10 +14,10 @@ import store.coding.IMerryFactor;
  * @author Administrator
  *
  */
-public class Factory07 implements IMerryFactor {
+public class Factor07 implements IFactor {
 
 	@Override
-	public float doMerryFactor(String str) {
+	public float doFactor(String str) {
 		float factor = 0;
 		float count = 0;
         Pattern p = Pattern.compile("[\u0080-\u02AF]");
