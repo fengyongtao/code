@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 import store.coding.interfaces.IFactor;
 
+
 /**
  * 
  * 拉丁文及其拓展：

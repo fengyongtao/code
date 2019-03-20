@@ -28,10 +28,13 @@ public class Messy2NormalCode {
 					
 					float tempRate = 0;
 					result = new String(str.getBytes(c.getName()), d.getName());
-					Map<String, Float> tempMap = FactorCalculate.doCalculate(result);
-					System.out.println(tempMap);
-					for (Map.Entry<String, Float> entry: tempMap.entrySet()) {
-						tempRate += entry.getValue();
+					Map<String, Float> factorMap = FactorEngine.doCalculate(result);
+					Map<String, Float> ratioMap = RatioEngine.doCalculate(result);
+					System.out.println(factorMap);
+					for (Map.Entry<String, Float> entry: factorMap.entrySet()) {
+						String key = entry.getKey().replace("Factor", "Ratio");
+						key = key.replace("factors", "ratios");
+						tempRate += (ratioMap.get(key) * entry.getValue());
 					}
 					Map<String, Object> resultMap = new HashMap<String, Object>();
 					//  乱码的长度一般多于正常的字符长度

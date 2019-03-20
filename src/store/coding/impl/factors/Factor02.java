@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 import store.coding.interfaces.IFactor;
 
+
 /**
  * 
  * 全角ASCII、全角中英文标点、半宽片假名、半宽平假名、半宽韩文字母：FF00-FFEF

@@ -5,7 +5,7 @@ package store.coding.interfaces;
  * @author Administrator
  *
  */
-public interface IFactor {
+public interface IFactor extends ICoding {
 	
 	public float doFactor(String str);
 	

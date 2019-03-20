@@ -5,8 +5,8 @@ package store.coding.interfaces;
  * @author Administrator
  *
  */
-public interface IRatio {
+public interface IRatio extends ICoding {
 
-	public Float doRatio(String str);
+	public float doRatio(String str);
 	
 }

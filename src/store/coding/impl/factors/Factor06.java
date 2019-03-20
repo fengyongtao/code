@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 import store.coding.interfaces.IFactor;
 
+
 /**
  *
  * 日文平假名：3040-309F；

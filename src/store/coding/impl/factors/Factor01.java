@@ -2,7 +2,6 @@ package store.coding.impl.factors;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
 import store.coding.interfaces.IFactor;
 
 /**

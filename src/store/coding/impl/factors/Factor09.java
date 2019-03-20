@@ -5,6 +5,7 @@ import java.util.regex.Pattern;
 
 import store.coding.interfaces.IFactor;
 
+
 /**
  * 
  * Ì«Ðþ¾­·ûºÅ£º1D300-1D35F£»
