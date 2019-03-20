@@ -1,11 +1,13 @@
-package store.coding.impl.ratios;
+package store.coding.util;
 
-import store.coding.interfaces.IRatio;
-
-public class Ratio01 implements IRatio {
-
-	@Override
-	public float doRatio(String str) {
+/**
+ * 判断简体中文占比
+ * @author Administrator
+ *
+ */
+public class JudgeChinese {
+	
+	public static float IsSimple(String str) {
 		float count = 0;
 		String temp = null;
 		for(int i = 0; i < str.length(); i++) {

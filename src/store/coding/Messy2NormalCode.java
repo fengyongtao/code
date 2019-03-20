@@ -3,7 +3,6 @@ package store.coding;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -12,7 +11,7 @@ public class Messy2NormalCode {
 	/**
 	 * 将传入的字符串进行转码（用于乱码问题）
 	 * JAVA字符串编码转换不可逆，故存在数据丢失的情况
-	 * @param str
+	 * @param str		
 	 * @return
 	 * @throws UnsupportedEncodingException
 	 */
@@ -30,26 +29,24 @@ public class Messy2NormalCode {
 					result = new String(str.getBytes(c.getName()), d.getName());
 					Map<String, Float> factorMap = FactorEngine.doCalculate(result);
 					Map<String, Float> ratioMap = RatioEngine.doCalculate(result);
-					System.out.println(factorMap);
 					for (Map.Entry<String, Float> entry: factorMap.entrySet()) {
 						String key = entry.getKey().replace("Factor", "Ratio");
 						key = key.replace("factors", "ratios");
 						tempRate += (ratioMap.get(key) * entry.getValue());
 					}
 					Map<String, Object> resultMap = new HashMap<String, Object>();
-					//  乱码的长度一般多于正常的字符长度
-					if (str.length() >= result.length()) {
-						tempRate = (float) (tempRate + 0.1);
-					}
-					if (str.equals(result)) {
-						tempRate = (float) (tempRate - 0.1);
-					}
+//					//  乱码的长度一般多于正常的字符长度
+//					if (str.length() >= result.length()) {
+//						tempRate = (float) (tempRate + 0.1);
+//					}
+//					if (str.equals(result)) {
+//						tempRate = (float) (tempRate - 0.1);
+//					}
 					resultMap.put("messyRate", tempRate);
 					resultMap.put("beforeCode", c.getName());
 					resultMap.put("afterCode", d.getName());
 					resultMap.put("beforeStr", str);
 					resultMap.put("afterStr", result);
-					System.out.println(resultMap);
 					resultList.add(resultMap);
 				}
 			}
@@ -59,26 +56,19 @@ public class Messy2NormalCode {
 
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		
-		Map<String, Object> resultMap = new HashMap<String, Object>();
-		float maxValue = 0;
-		
-		
-		// String str = "锘挎槬鐪犱笉瑙夋檽锛屽澶勯椈鍟奸";
 		String str = "鏂囦贡鐮侀棶棰� ";
+		float maxValue = 0;
+		Map<String, Object> tempMap = new HashMap<String, Object>();
+		Map<String, Object> resultMap = new HashMap<String, Object>();
 		List<Object> resultList = encode(str);
-		for (Iterator<Object> iterator = resultList.iterator(); iterator.hasNext();) {
-			resultMap = (Map<String, Object>) iterator.next();
-//			System.out.println("【" + resultMap.get("messyRate") + "】" + "【" + resultMap.get("afterStr") + "】");
-			if (maxValue < (float) resultMap.get("messyRate")) {
-				maxValue = (float) resultMap.get("messyRate");
-				System.out.println("【最终结果】" + resultMap);
+		for (int i = 0; i < resultList.size(); i++) {
+			tempMap = (Map<String, Object>) resultList.get(i);
+			if (maxValue < (float) tempMap.get("messyRate")) {
+				maxValue = (float) tempMap.get("messyRate");
+				resultMap = tempMap;
 			}
 		}
-		
-		
-		
-		
+		System.out.println("【最优方案】resultMap：" + resultMap);
 	}
 	
 	
