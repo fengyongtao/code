@@ -6,7 +6,7 @@ import store.coding.interfaces.IFactor;
 
 /**
  * 
- * ÖĞÎÄ£¨¼òÌåºÍ·±Ìå£©×Ö·û
+ * ä¸­æ–‡ï¼ˆç®€ä½“å’Œç¹ä½“ï¼‰å­—ç¬¦
  * @author Administrator
  *
  */

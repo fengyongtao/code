@@ -15,11 +15,9 @@ public enum Code {
 	UTF16LE(11, "UTF_16LE"),
 	UTF16BE(12, "UTF_16BE");
 	
-	// 成员变量
 	private Integer index;
 	private String name;
 	
-	// 构造函数 
 	private Code(int index, String name) {
 		this.index = index;
         this.name = name;

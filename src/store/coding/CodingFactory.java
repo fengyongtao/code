@@ -3,7 +3,7 @@ package store.coding;
 import store.coding.interfaces.ICoding;
 
 /**
- * 编码对象创建工厂
+ * 缂栫爜瀵硅薄鍒涘缓宸ュ巶
  * @author Administrator
  *
  */

@@ -8,7 +8,7 @@ import store.coding.interfaces.IFactor;
 
 /**
  * 
- * ä�ķ��ţ�2800-28FF
+ * 盲文符号：2800-28FF
  * @author Administrator
  *
  */

@@ -8,7 +8,7 @@ import store.coding.interfaces.IFactor;
 
 /**
  * 
- * 全角ASCII、全角中英文标点、半宽片假名、半宽平假名、半宽韩文字母：FF00-FFEF
+ * 鍏ㄨASCII銆佸叏瑙掍腑鑻辨枃鏍囩偣銆佸崐瀹界墖鍋囧悕銆佸崐瀹藉钩鍋囧悕銆佸崐瀹介煩鏂囧瓧姣嶏細FF00-FFEF
  * @author Administrator
  *
  */

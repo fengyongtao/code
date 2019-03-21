@@ -56,7 +56,7 @@ public class Messy2NormalCode {
 
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) throws UnsupportedEncodingException {
-		String str = "鏂囦贡鐮侀棶棰� ";
+		String str = "鏂囦贡鐮侀棶棰 ";
 		float maxValue = 0;
 		Map<String, Object> tempMap = new HashMap<String, Object>();
 		Map<String, Object> resultMap = new HashMap<String, Object>();

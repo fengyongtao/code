@@ -9,7 +9,7 @@ import store.coding.interfaces.IRatio;
 import store.coding.util.ClassUtils;
 
 /**
- * ¼ÆËãÃ¿¸öÒòËØµÄÏµÊı
+ * è®¡ç®—æ¯ä¸ªå› ç´ çš„ç³»æ•°
  * @author Administrator
  *
  */

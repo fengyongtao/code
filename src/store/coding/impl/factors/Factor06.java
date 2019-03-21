@@ -8,9 +8,9 @@ import store.coding.interfaces.IFactor;
 
 /**
  *
- * ÈÕÎÄÆ½¼ÙÃû£º3040-309F£»
- * ÈÕÎÄÆ¬¼ÙÃû£º30A0-30FF£»
- * ÈÕÎÄÆ¬¼ÙÃûÆ´ÒôÀ©Õ¹£º31F0-31FF£»
+ * æ—¥æ–‡å¹³å‡åï¼š3040-309Fï¼›
+ * æ—¥æ–‡ç‰‡å‡åï¼š30A0-30FFï¼›
+ * æ—¥æ–‡ç‰‡å‡åæ‹¼éŸ³æ‰©å±•ï¼š31F0-31FFï¼›
  * @author Administrator
  *
  */

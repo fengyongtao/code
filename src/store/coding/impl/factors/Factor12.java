@@ -8,7 +8,7 @@ import store.coding.interfaces.IFactor;
 
 /**
  * 
- * 中文竖排标点：FE10-FE1F
+ * 涓枃绔栨帓鏍囩偣锛欶E10-FE1F
  * @author Administrator
  *
  */

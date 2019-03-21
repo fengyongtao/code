@@ -8,8 +8,8 @@ import store.coding.interfaces.IFactor;
 
 /**
  * 
- * Ì«Ğş¾­·ûºÅ£º1D300-1D35F£»
- * Ò×¾­ÁùÊ®ËÄØÔÏó£º4DC0-4DFF£»
+ * å¤ªç„ç»ç¬¦å·ï¼š1D300-1D35Fï¼›
+ * æ˜“ç»å…­åå››å¦è±¡ï¼š4DC0-4DFFï¼›
  * @author Administrator
  *
  */
